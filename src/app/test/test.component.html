@@ -1,0 +1,12 @@
+<!--Teste de interpolação de variável:-->
+<p>{{stringInterpolation}}</p>
+<!--Exemplo de click de botão utilizando o método criado processClick()-->
+<button (click) = "processClick()"> Botão Teste</button>
+<!--Teste com a variável isDisabled para habilitar e desabilitar o botão-->
+<button [disabled] = "isDisabled"> Botão Teste 2</button>
+<button (click) = "disableButton()"> Botão Teste 3</button>
+<br><br>
+<div style="margin: 20px; border: 3px solid black;">
+    <h1 *ngIf="showTitle">Isso é um teste</h1>
+    <button (click)="changeTitleDisplayStatus()">Exibir Botão</button>
+</div>
