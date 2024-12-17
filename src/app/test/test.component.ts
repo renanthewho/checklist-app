@@ -13,6 +13,11 @@ export class TestComponent {
   stringInterpolation = "Esse é um exemplo de string interpolation.";
   isDisabled = false;
   showTitle = true;
+  items = [{descricao: "Item 1", id:1},
+          {descricao: "Item 2", id:2},
+          {descricao: "Item 3", id:3},
+          {descricao: "Item 4", id:4}
+  ]
 
   processClick(){
     console.log("This button was clicked.")
