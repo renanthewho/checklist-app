@@ -1,0 +1,9 @@
+.app-header-container{
+    background-color: cornflowerblue;
+}
+
+.app-name{
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
