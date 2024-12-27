@@ -6,16 +6,21 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CategoryComponent } from './category/category.component';
 import { TestComponent } from './test/test.component';
+import { HeaderComponent } from './header/header.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryComponent,
-    TestComponent
+    TestComponent,
+    HeaderComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [
     provideAnimationsAsync()
