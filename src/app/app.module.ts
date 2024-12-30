@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material.module';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     CategoryComponent,
     TestComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    PageNotFoundComponent
     
   ],
   imports: [
