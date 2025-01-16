@@ -1,8 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.largura {
-    width: 10% !important;
-}
+html, body {
+    height: 100%; /* Garantir que a página ocupe 100% da altura */
+    margin: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* O container principal deve ocupar 100% da altura */
+  }
+  
+  mat-sidenav-container {
+    display: flex;
+    height: 100%; /* O container do sidenav deve ocupar 100% da altura */
+  }
+  
+  mat-sidenav {
+    height: 100%; /* O sidenav deve ocupar 100% da altura */
+    overflow: auto; /* Caso o conteúdo ultrapasse, deve criar uma rolagem interna */
+  }
+  
+  .largura {
+    width: 12% !important; /* Controla a largura do sidenav, você pode ajustar conforme necessário */
+  }
+  
+  mat-list {
+    padding: 0; /* Remover o padding extra no mat-list */
+  }
+  
+  mat-list-item {
+    min-height: 48px; /* Ajuste a altura mínima dos itens */
+    padding: 10px;
+  }
