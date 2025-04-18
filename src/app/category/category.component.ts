@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Category } from '../_module/category';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
+import { CategoryEditComponent } from '../category-edit/category-edit.component';
 
 export const CATEGORY_DATA = [
   {name: 'Educação', guid: 'aaa-bbb-ccc-dddd'},
@@ -28,8 +29,21 @@ export class CategoryComponent {
 
   }
 
-  editCategory(category: Category){
-    console.log("Edit category clicked.")
+  editCategory(inputCategory: Category){
+    console.log("Edit category clicked.");
+
+    //CategoryEditComponent é o componente que queremos que seja aberto.
+    this.dialog.open(CategoryEditComponent, {disableClose: true, 
+      data: {editableCategory : inputCategory}})
+      .afterClosed().subscribe(
+      resp=>{
+        if(resp){
+          console.log('Categoria editada com sucesso.')
+        }else{
+          console.log('Categoria não editada.')
+        }
+      }
+    )
   }
 
   deleteCategory(category: Category){
@@ -47,6 +61,7 @@ export class CategoryComponent {
   }
 
   createCategory(){
-    console.log("Create category clicked.")
+    this.dialog.open(CategoryEditComponent, {disableClose: true, 
+      data: {actionName : 'Criar'}})
   }
 }
